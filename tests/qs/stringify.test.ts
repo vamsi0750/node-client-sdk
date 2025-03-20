@@ -1,7 +1,7 @@
 import iconv from 'iconv-lite';
-import { stringify } from 'vamsi/internal/qs';
-import { encode } from 'vamsi/internal/qs/utils';
-import { StringifyOptions } from 'vamsi/internal/qs/types';
+import { stringify } from 'vamsi-sdk/internal/qs';
+import { encode } from 'vamsi-sdk/internal/qs/utils';
+import { StringifyOptions } from 'vamsi-sdk/internal/qs/types';
 import { empty_test_cases } from './empty-keys-cases';
 import assert from 'assert';
 

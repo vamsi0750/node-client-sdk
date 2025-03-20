@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import Petstore from 'vamsi';
-import { APIUserAbortError } from 'vamsi';
-import { Headers } from 'vamsi/core';
+import Petstore from 'vamsi-sdk';
+import { APIUserAbortError } from 'vamsi-sdk';
+import { Headers } from 'vamsi-sdk/core';
 import defaultFetch, { Response, type RequestInit, type RequestInfo } from 'node-fetch';
 
 describe('instantiate client', () => {

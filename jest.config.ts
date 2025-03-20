@@ -7,9 +7,9 @@ const config: JestConfigWithTsJest = {
     '^.+\\.(t|j)sx?$': ['@swc/jest', { sourceMaps: 'inline' }],
   },
   moduleNameMapper: {
-    '^vamsi$': '<rootDir>/src/index.ts',
-    '^vamsi/_shims/auto/(.*)$': '<rootDir>/src/_shims/auto/$1-node',
-    '^vamsi/(.*)$': '<rootDir>/src/$1',
+    '^vamsi-sdk$': '<rootDir>/src/index.ts',
+    '^vamsi-sdk/_shims/auto/(.*)$': '<rootDir>/src/_shims/auto/$1-node',
+    '^vamsi-sdk/(.*)$': '<rootDir>/src/$1',
   },
   modulePathIgnorePatterns: [
     '<rootDir>/ecosystem-tests/',
