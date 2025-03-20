@@ -9,9 +9,9 @@ export function getRuntime({ manuallyImported }: { manuallyImported?: boolean } 
   const recommendation =
     manuallyImported ?
       `You may need to use polyfills`
-    : `Add one of these imports before your first \`import … from 'vamsi'\`:
-- \`import 'vamsi/shims/node'\` (if you're running on Node)
-- \`import 'vamsi/shims/web'\` (otherwise)
+    : `Add one of these imports before your first \`import … from 'vamsi-sdk'\`:
+- \`import 'vamsi-sdk/shims/node'\` (if you're running on Node)
+- \`import 'vamsi-sdk/shims/web'\` (otherwise)
 `;
 
   let _fetch, _Request, _Response, _Headers;

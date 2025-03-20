@@ -1,6 +1,6 @@
 import fs from 'fs';
-import { toFile, type ResponseLike } from 'vamsi/uploads';
-import { File } from 'vamsi/_shims/index';
+import { toFile, type ResponseLike } from 'vamsi-sdk/uploads';
+import { File } from 'vamsi-sdk/_shims/index';
 
 class MyClass {
   name: string = 'foo';

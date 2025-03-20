@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "vamsi/*": ["dist/src/*"],
-      "vamsi": ["dist/src/index.ts"],
+      "vamsi-sdk/*": ["dist/src/*"],
+      "vamsi-sdk": ["dist/src/index.ts"],
     },
     "noEmit": false,
     "declaration": true,
