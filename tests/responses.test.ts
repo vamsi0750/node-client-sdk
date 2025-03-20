@@ -1,5 +1,5 @@
-import { createResponseHeaders } from 'vamsi/core';
-import { Headers } from 'vamsi/_shims/index';
+import { createResponseHeaders } from 'vamsi-sdk/core';
+import { Headers } from 'vamsi-sdk/_shims/index';
 
 describe('response parsing', () => {
   // TODO: test unicode characters
