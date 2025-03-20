@@ -1,5 +1,5 @@
 {
-  "name": "vamsi",
+  "name": "vamsi-sdk",
   "version": "0.0.1-alpha.1",
   "description": "The official TypeScript library for the Petstore API",
   "author": "Petstore <example@example.com>",
@@ -59,8 +59,8 @@
     "./shims/web.mjs"
   ],
   "imports": {
-    "vamsi": ".",
-    "vamsi/*": "./src/*"
+    "vamsi-sdk": ".",
+    "vamsi-sdk/*": "./src/*"
   },
   "exports": {
     "./_shims/auto/*": {

@@ -1,6 +1,6 @@
-import { multipartFormRequestOptions, createForm } from 'vamsi/core';
-import { Blob } from 'vamsi/_shims/index';
-import { toFile } from 'vamsi';
+import { multipartFormRequestOptions, createForm } from 'vamsi-sdk/core';
+import { Blob } from 'vamsi-sdk/_shims/index';
+import { toFile } from 'vamsi-sdk';
 
 describe('form data validation', () => {
   test('valid values do not error', async () => {

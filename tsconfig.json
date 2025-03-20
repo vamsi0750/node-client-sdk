@@ -9,9 +9,9 @@
     "esModuleInterop": true,
     "baseUrl": "./",
     "paths": {
-      "vamsi/_shims/auto/*": ["src/_shims/auto/*-node"],
-      "vamsi/*": ["src/*"],
-      "vamsi": ["src/index.ts"]
+      "vamsi-sdk/_shims/auto/*": ["src/_shims/auto/*-node"],
+      "vamsi-sdk/*": ["src/*"],
+      "vamsi-sdk": ["src/index.ts"]
     },
     "noEmit": true,
 

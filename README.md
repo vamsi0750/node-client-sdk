@@ -1,6 +1,6 @@
 # Petstore Node API Library
 
-[![NPM version](https://img.shields.io/npm/v/vamsi.svg)](https://npmjs.org/package/vamsi) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/vamsi)
+[![NPM version](https://img.shields.io/npm/v/vamsi-sdk.svg)](https://npmjs.org/package/vamsi-sdk) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/vamsi-sdk)
 
 This library provides convenient access to the Petstore REST API from server-side TypeScript or JavaScript.
 
@@ -11,11 +11,8 @@ It is generated with [Stainless](https://www.stainlessapi.com/).
 ## Installation
 
 ```sh
-npm install git+ssh://git@github.com:vamsi0750/node-client-sdk.git
+npm install vamsi-sdk
 ```
-
-> [!NOTE]
-> Once this package is [published to npm](https://app.stainlessapi.com/docs/guides/publish), this will become: `npm install vamsi`
 
 ## Usage
 
@@ -23,7 +20,7 @@ The full API of this library can be found in [api.md](api.md).
 
 <!-- prettier-ignore -->
 ```js
-import Petstore from 'vamsi';
+import Petstore from 'vamsi-sdk';
 
 const client = new Petstore({
   apiKey: process.env['PETSTORE_API_KEY'], // This is the default and can be omitted
@@ -44,7 +41,7 @@ This library includes TypeScript definitions for all request params and response
 
 <!-- prettier-ignore -->
 ```ts
-import Petstore from 'vamsi';
+import Petstore from 'vamsi-sdk';
 
 const client = new Petstore({
   apiKey: process.env['PETSTORE_API_KEY'], // This is the default and can be omitted
@@ -213,11 +210,11 @@ add the following import before your first import `from "Petstore"`:
 ```ts
 // Tell TypeScript and the package to use the global web fetch instead of node-fetch.
 // Note, despite the name, this does not add any polyfills, but expects them to be provided if needed.
-import 'vamsi/shims/web';
-import Petstore from 'vamsi';
+import 'vamsi-sdk/shims/web';
+import Petstore from 'vamsi-sdk';
 ```
 
-To do the inverse, add `import "vamsi/shims/node"` (which does import polyfills).
+To do the inverse, add `import "vamsi-sdk/shims/node"` (which does import polyfills).
 This can also be useful if you are getting the wrong TypeScript types for `Response` ([more details](https://github.com/vamsi0750/node-client-sdk/tree/main/src/_shims#readme)).
 
 ### Logging and middleware
@@ -227,7 +224,7 @@ which can be used to inspect or alter the `Request` or `Response` before/after e
 
 ```ts
 import { fetch } from 'undici'; // as one example
-import Petstore from 'vamsi';
+import Petstore from 'vamsi-sdk';
 
 const client = new Petstore({
   fetch: async (url: RequestInfo, init?: RequestInit): Promise<Response> => {

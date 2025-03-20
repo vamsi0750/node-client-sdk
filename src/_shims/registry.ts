@@ -42,11 +42,13 @@ export let isFsReadStream: Shims['isFsReadStream'] | undefined = undefined;
 export function setShims(shims: Shims, options: { auto: boolean } = { auto: false }) {
   if (auto) {
     throw new Error(
-      `you must \`import 'vamsi/shims/${shims.kind}'\` before importing anything else from vamsi`,
+      `you must \`import 'vamsi-sdk/shims/${shims.kind}'\` before importing anything else from vamsi-sdk`,
     );
   }
   if (kind) {
-    throw new Error(`can't \`import 'vamsi/shims/${shims.kind}'\` after \`import 'vamsi/shims/${kind}'\``);
+    throw new Error(
+      `can't \`import 'vamsi-sdk/shims/${shims.kind}'\` after \`import 'vamsi-sdk/shims/${kind}'\``,
+    );
   }
   auto = options.auto;
   kind = shims.kind;

@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import Petstore from 'vamsi';
+import Petstore from 'vamsi-sdk';
 import { Response } from 'node-fetch';
 
 const client = new Petstore({
