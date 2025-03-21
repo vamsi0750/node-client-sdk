@@ -6,7 +6,7 @@ This library provides convenient access to the Petstore REST API from server-sid
 
 The REST API documentation can be found on [app.stainlessapi.com](https://app.stainlessapi.com/docs). The full API of this library can be found in [api.md](api.md).
 
-It is generated with [Stainless](https://www.stainlessapi.com/).
+It is generated with [Stainless](https://www.stainless.com/).
 
 ## Installation
 
@@ -55,6 +55,36 @@ main();
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
+
+## File uploads
+
+Request parameters that correspond to file uploads can be passed in many different forms:
+
+- `File` (or an object with the same structure)
+- a `fetch` `Response` (or an object with the same structure)
+- an `fs.ReadStream`
+- the return value of our `toFile` helper
+
+```ts
+import fs from 'fs';
+import fetch from 'node-fetch';
+import Petstore, { toFile } from 'vamsi-sdk';
+
+const client = new Petstore();
+
+// If you have access to Node `fs` we recommend using `fs.createReadStream()`:
+await client.pets.uploadImage(0, { image: fs.createReadStream('/path/to/file') });
+
+// Or if you have the web `File` API you can pass a `File` instance:
+await client.pets.uploadImage(0, { image: new File(['my bytes'], 'file') });
+
+// You can also pass a `fetch` `Response`:
+await client.pets.uploadImage(0, { image: await fetch('https://somesite/file') });
+
+// Finally, if none of the above are convenient, you can use our `toFile` helper:
+await client.pets.uploadImage(0, { image: await toFile(Buffer.from('my bytes'), 'file') });
+await client.pets.uploadImage(0, { image: await toFile(new Uint8Array([0, 1, 2]), 'file') });
+```
 
 ## Handling errors
 
@@ -266,7 +296,7 @@ await client.store.inventory({
 This package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) conventions, though certain backwards-incompatible changes may be released as minor versions:
 
 1. Changes that only affect static types, without breaking runtime behavior.
-2. Changes to library internals which are technically public but not intended or documented for external use. _(Please open a GitHub issue to let us know if you are relying on such internals)_.
+2. Changes to library internals which are technically public but not intended or documented for external use. _(Please open a GitHub issue to let us know if you are relying on such internals.)_
 3. Changes that we do not expect to impact the vast majority of users in practice.
 
 We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.
