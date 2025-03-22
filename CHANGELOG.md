@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.2 (2025-03-22)
+
+Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/vamsi0750/node-client-sdk/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
+
+### Bug Fixes
+
+* avoid type error in certain environments ([#10](https://github.com/vamsi0750/node-client-sdk/issues/10)) ([59093de](https://github.com/vamsi0750/node-client-sdk/commit/59093de84b717731f69a6de26c6cfc7ec96c8848))
+
+
+### Chores
+
+* **internal:** codegen related update ([#8](https://github.com/vamsi0750/node-client-sdk/issues/8)) ([4f80322](https://github.com/vamsi0750/node-client-sdk/commit/4f80322b9896f0f61dac7bd1719bfb4bac3a704d))
+
 ## 0.1.0-alpha.1 (2025-03-20)
 
 Full Changelog: [v0.0.1-alpha.1...v0.1.0-alpha.1](https://github.com/vamsi0750/node-client-sdk/compare/v0.0.1-alpha.1...v0.1.0-alpha.1)
